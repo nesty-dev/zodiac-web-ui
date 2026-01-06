@@ -1,5 +1,6 @@
-import "@zodiac/styles/index.css";
 import type { Metadata } from "next";
+
+import "../styles/globals.css";
 
 export const metadata: Metadata = {
   title: "Zodiac Platform",

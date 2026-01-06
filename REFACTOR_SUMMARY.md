@@ -141,13 +141,6 @@ zodiac-web-ui/
 - Navbar variants: Primary, Compact
 - All components export props interfaces
 
-### @zodiac/styles
-
-- Pure CSS design tokens
-- Base tokens (typography, spacing, colors)
-- Zodiac themes: Aries, Taurus, Gemini
-- Light/dark mode support
-
 ### @zodiac/contracts
 
 - Shared TypeScript types
