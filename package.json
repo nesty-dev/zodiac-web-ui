@@ -2,7 +2,7 @@
   "name": "zodiac",
   "version": "1.0.0",
   "private": true,
-    "workspaces": [
+  "workspaces": [
     "apps/*",
     "packages/ui",
     "packages/prestes",
@@ -10,11 +10,16 @@
   ],
   "description": "Zodiac-themed platform monorepo",
   "scripts": {
-    "dev": "turbo run dev",
-    "build": "turbo run build",
-    "start": "turbo run start",
-    "lint": "turbo run lint",
-    "clean": "turbo run clean"
+    "dev:web": "bun --cwd apps/web dev",
+    "dev:admin": "bun --cwd apps/backoffice dev",
+
+    "build:web": "bun --cwd apps/web build",
+    "build:admin": "bun --cwd apps/backoffice build",
+    "build": "bun run build:web && bun run build:admin",
+
+    "lint:web": "bun --cwd apps/web lint",
+    "lint:admin": "bun --cwd apps/backoffice lint",
+    "lint": "bun run lint:web && bun run lint:admin"
   },
   "devDependencies": {
     "turbo": "^2.0.0",
