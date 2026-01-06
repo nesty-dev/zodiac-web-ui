@@ -1,7 +1,0 @@
-/* base tokens */
-@import "./base/tokens.css";
-
-/* zodiac themes */
-@import "./zodiacs/aries.css";
-@import "./zodiacs/taurus.css";
-@import "./zodiacs/gemini.css";
