@@ -1,0 +1,37 @@
+/**
+ * Aries Theme
+ * Bold, fiery, energetic design tokens
+ */
+
+[data-theme="aries"] {
+  /* Primary Colors - Fire and passion */
+  --color-primary: #dc2626;        /* Red-600 */
+  --color-primary-hover: #b91c1c;  /* Red-700 */
+  --color-primary-text: #ffffff;
+
+  /* Secondary Colors - Warm accents */
+  --color-secondary: #ea580c;      /* Orange-600 */
+  --color-secondary-hover: #c2410c; /* Orange-700 */
+  --color-secondary-text: #ffffff;
+
+  /* Accent */
+  --color-accent: #f59e0b;         /* Amber-500 */
+}
+
+/* Aries Light Mode */
+[data-theme="aries"][data-mode="light"] {
+  --color-background: #fef2f2;     /* Red-50 */
+  --color-surface: #ffffff;
+  --color-text: #7f1d1d;           /* Red-900 */
+  --color-text-muted: #991b1b;     /* Red-800 */
+  --color-border: #fecaca;         /* Red-200 */
+}
+
+/* Aries Dark Mode */
+[data-theme="aries"][data-mode="dark"] {
+  --color-background: #450a0a;     /* Red-950 */
+  --color-surface: #7f1d1d;        /* Red-900 */
+  --color-text: #fef2f2;           /* Red-50 */
+  --color-text-muted: #fca5a5;     /* Red-300 */
+  --color-border: #991b1b;         /* Red-800 */
+}

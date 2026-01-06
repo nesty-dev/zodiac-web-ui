@@ -1,0 +1,54 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Page Composition Schema",
+  "description": "JSON schema for page composition configuration",
+  "type": "object",
+  "required": ["pageId", "zodiac", "components"],
+  "properties": {
+    "pageId": {
+      "type": "string",
+      "description": "Page identifier"
+    },
+    "zodiac": {
+      "type": "string",
+      "description": "Zodiac sign this page belongs to"
+    },
+    "components": {
+      "type": "array",
+      "description": "List of components to render",
+      "items": {
+        "type": "object",
+        "required": ["type", "variant"],
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": ["hero", "home", "navbar", "footer", "section"],
+            "description": "Component type"
+          },
+          "variant": {
+            "type": "string",
+            "description": "Semantic variant name"
+          },
+          "props": {
+            "type": "object",
+            "description": "Component-specific props",
+            "additionalProperties": true
+          },
+          "id": {
+            "type": "string",
+            "description": "Optional component ID for tracking"
+          }
+        }
+      }
+    },
+    "metadata": {
+      "type": "object",
+      "description": "Page metadata",
+      "properties": {
+        "title": { "type": "string" },
+        "description": { "type": "string" }
+      },
+      "additionalProperties": true
+    }
+  }
+}

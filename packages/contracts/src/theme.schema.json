@@ -1,0 +1,75 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Theme Configuration Schema",
+  "description": "JSON schema for zodiac theme configuration",
+  "type": "object",
+  "required": ["zodiac", "theme", "mode", "layout"],
+  "properties": {
+    "zodiac": {
+      "type": "string",
+      "enum": [
+        "aries",
+        "taurus",
+        "gemini",
+        "cancer",
+        "leo",
+        "virgo",
+        "libra",
+        "scorpio",
+        "sagittarius",
+        "capricorn",
+        "aquarius",
+        "pisces"
+      ],
+      "description": "The zodiac sign this theme is for"
+    },
+    "theme": {
+      "type": "string",
+      "description": "The theme name (usually matches zodiac)"
+    },
+    "mode": {
+      "type": "string",
+      "enum": ["light", "dark"],
+      "description": "Light or dark mode"
+    },
+    "layout": {
+      "type": "string",
+      "enum": ["Theme1", "Theme2", "Custom"],
+      "description": "Layout type to use"
+    },
+    "tokens": {
+      "type": "object",
+      "description": "Custom design tokens (optional overrides)",
+      "properties": {
+        "colors": {
+          "type": "object",
+          "properties": {
+            "primary": { "type": "string" },
+            "primaryHover": { "type": "string" },
+            "primaryText": { "type": "string" },
+            "secondary": { "type": "string" },
+            "secondaryHover": { "type": "string" },
+            "secondaryText": { "type": "string" },
+            "background": { "type": "string" },
+            "surface": { "type": "string" },
+            "text": { "type": "string" },
+            "textMuted": { "type": "string" },
+            "border": { "type": "string" }
+          }
+        },
+        "typography": {
+          "type": "object",
+          "properties": {
+            "fontFamilyBase": { "type": "string" },
+            "fontFamilyHeading": { "type": "string" },
+            "fontSizeBase": { "type": "string" }
+          }
+        },
+        "spacing": {
+          "type": "object",
+          "additionalProperties": { "type": "string" }
+        }
+      }
+    }
+  }
+}
