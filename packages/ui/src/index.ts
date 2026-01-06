@@ -1,14 +1,8 @@
-/**
- * Base UI Components Library
- * Contains atoms, molecules, and organisms for the design system.
- */
-
 // Atoms
-export { Button } from './atoms/Button';
-export type { ButtonProps } from './atoms/Button';
+export * from "./atoms/Button/Button";
 
 // Molecules
-// export { Card } from './molecules/Card';
+export * from "./molecules/Card/Card";
 
 // Organisms
-// export { Header } from './organisms/Header';
+export * from "./organisms/Header/Header";

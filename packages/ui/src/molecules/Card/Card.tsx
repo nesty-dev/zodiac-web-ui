@@ -1,17 +1,17 @@
-import { ReactNode, HTMLAttributes } from 'react';
+import { ReactNode, HTMLAttributes } from "react";
 
 export interface CardProps extends HTMLAttributes<HTMLDivElement> {
   children: ReactNode;
-  variant?: 'default' | 'bordered' | 'elevated';
+  variant?: "default" | "bordered" | "elevated";
 }
 
 /**
  * Card component - Base UI molecule
  */
 export function Card({
-  variant = 'default',
+  variant = "default",
   children,
-  className = '',
+  className = "",
   ...props
 }: CardProps) {
   return (
