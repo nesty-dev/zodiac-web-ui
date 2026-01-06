@@ -195,7 +195,6 @@ apps/web
   ├─> @zodiac/ui
   ├─> @zodiac/prestes
   │     └─> @zodiac/ui
-  ├─> @zodiac/styles
   └─> @zodiac/contracts
 
 apps/backoffice

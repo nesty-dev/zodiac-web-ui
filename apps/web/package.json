@@ -15,7 +15,6 @@
     "react-dom": "19.2.3",
     "@zodiac/ui": "workspace:*",
     "@zodiac/prestes": "workspace:*",
-    "@zodiac/styles": "workspace:*",
     "@zodiac/contracts": "workspace:*"
   },
   "devDependencies": {

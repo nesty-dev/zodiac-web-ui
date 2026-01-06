@@ -244,7 +244,6 @@ export default function PreviewPage({ searchParams }) {
 apps/web
   ├─ @zodiac/ui
   ├─ @zodiac/prestes
-  ├─ @zodiac/styles
   └─ @zodiac/contracts
 
 apps/backoffice

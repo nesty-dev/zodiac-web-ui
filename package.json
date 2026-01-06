@@ -1,7 +1,13 @@
 {
-  "name": "zodiac-monorepo",
+  "name": "zodiac",
   "version": "1.0.0",
   "private": true,
+    "workspaces": [
+    "apps/*",
+    "packages/ui",
+    "packages/prestes",
+    "packages/contracts"
+  ],
   "description": "Zodiac-themed platform monorepo",
   "scripts": {
     "dev": "turbo run dev",
