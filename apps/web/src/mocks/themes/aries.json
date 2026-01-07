@@ -1,0 +1,29 @@
+{
+  "id": "aries",
+  "label": "Aries",
+  "layout": "theme1",
+
+  "style": {
+    "tokens": "aries",
+    "overrides": {
+      "--background": "oklch(0.225 0.0129 314.55)",
+      "--foreground": "oklch(0.9821 0 0)"
+    }
+  },
+
+  "layoutSlots": {
+    "Header": "Primary"
+  },
+
+  "pages": [
+    {
+      "name": "Home",
+      "path": "/",
+      "components": {
+        "Hero": "Editorial",
+        "Section1": "Grid",
+        "Section2": "Minimal"
+      }
+    }
+  ]
+}

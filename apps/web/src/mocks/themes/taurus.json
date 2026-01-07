@@ -1,0 +1,30 @@
+{
+  "id": "taurus",
+  "label": "Taurus",
+  "layout": "theme1",
+
+  "style": {
+    "tokens": "taurus",
+    "overrides": {
+      "--background": "oklch(0.7665 0.1387 91.06)",
+      "--foreground": "oklch(0.2178 0 0)"
+    }
+  },
+
+  "layoutSlots": {
+    "Header": "Compact",
+    "Sidebar": "Default"
+  },
+
+  "pages": [
+    {
+      "name": "Home",
+      "path": "/",
+      "components": {
+        "Hero": "Minimal",
+        "Section1": "Editorial",
+        "Section2": "Grid"
+      }
+    }
+  ]
+}
