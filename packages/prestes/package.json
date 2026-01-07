@@ -6,9 +6,10 @@
   "types": "./src/index.ts",
   "exports": {
     ".": "./src/index.ts",
-    "./hero/*": "./src/hero/*.tsx",
-    "./home/*": "./src/home/*.tsx",
-    "./navbar/*": "./src/navbar/*.tsx"
+    "./hero": "./src/hero/index.ts",
+    "./home": "./src/home/index.ts",
+    "./layout": "./src/layout/index.ts",
+    "./navbar": "./src/navbar/index.ts"
   },
   "scripts": {
     "lint": "eslint .",

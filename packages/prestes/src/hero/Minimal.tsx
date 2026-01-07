@@ -1,4 +1,4 @@
-import { Button } from '@zodiac/ui';
+import { Button } from "@zodiac/ui";
 
 export interface MinimalProps {
   title: string;
@@ -7,10 +7,6 @@ export interface MinimalProps {
   ctaLink?: string;
 }
 
-/**
- * Minimal Hero Preset
- * Clean, minimal hero with centered text.
- */
 export function Minimal({ title, subtitle, ctaText, ctaLink }: MinimalProps) {
   return (
     <section className="hero hero--minimal">
@@ -18,7 +14,10 @@ export function Minimal({ title, subtitle, ctaText, ctaLink }: MinimalProps) {
         <h1 className="hero__title">{title}</h1>
         {subtitle && <p className="hero__subtitle">{subtitle}</p>}
         {ctaText && ctaLink && (
-          <Button variant="outline" onClick={() => window.location.href = ctaLink}>
+          <Button
+            variant="outline"
+            onClick={() => (window.location.href = ctaLink)}
+          >
             {ctaText}
           </Button>
         )}

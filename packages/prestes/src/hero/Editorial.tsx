@@ -1,4 +1,4 @@
-import { Button } from '@zodiac/ui';
+import { Button } from "@zodiac/ui";
 
 export interface EditorialProps {
   title: string;
@@ -8,10 +8,6 @@ export interface EditorialProps {
   imageUrl?: string;
 }
 
-/**
- * Editorial Hero Preset
- * Large, editorial-style hero with prominent imagery and typography.
- */
 export function Editorial({
   title,
   subtitle,
@@ -25,7 +21,10 @@ export function Editorial({
         <h1 className="hero__title">{title}</h1>
         {subtitle && <p className="hero__subtitle">{subtitle}</p>}
         {ctaText && ctaLink && (
-          <Button variant="primary" onClick={() => window.location.href = ctaLink}>
+          <Button
+            variant="primary"
+            onClick={() => (window.location.href = ctaLink)}
+          >
             {ctaText}
           </Button>
         )}

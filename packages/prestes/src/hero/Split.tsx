@@ -1,4 +1,4 @@
-import { Button } from '@zodiac/ui';
+import { Button } from "@zodiac/ui";
 
 export interface SplitProps {
   title: string;
@@ -6,20 +6,16 @@ export interface SplitProps {
   ctaText?: string;
   ctaLink?: string;
   imageUrl?: string;
-  imagePosition?: 'left' | 'right';
+  imagePosition?: "left" | "right";
 }
 
-/**
- * Split Hero Preset
- * Split layout with content on one side and image on the other.
- */
 export function Split({
   title,
   subtitle,
   ctaText,
   ctaLink,
   imageUrl,
-  imagePosition = 'right',
+  imagePosition = "right",
 }: SplitProps) {
   return (
     <section className={`hero hero--split hero--split-${imagePosition}`}>
@@ -27,7 +23,10 @@ export function Split({
         <h1 className="hero__title">{title}</h1>
         {subtitle && <p className="hero__subtitle">{subtitle}</p>}
         {ctaText && ctaLink && (
-          <Button variant="primary" onClick={() => window.location.href = ctaLink}>
+          <Button
+            variant="primary"
+            onClick={() => (window.location.href = ctaLink)}
+          >
             {ctaText}
           </Button>
         )}
