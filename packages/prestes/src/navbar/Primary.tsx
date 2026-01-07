@@ -1,4 +1,4 @@
-import { Button } from '@zodiac/ui';
+import { Button } from "@zodiac/ui";
 
 export interface NavItem {
   label: string;
@@ -12,14 +12,11 @@ export interface PrimaryProps {
   ctaLink?: string;
 }
 
-/**
- * Primary Navbar Preset
- * Full-featured navbar with logo, navigation items, and CTA.
- */
 export function Primary({ logo, items, ctaText, ctaLink }: PrimaryProps) {
   return (
-    <nav className="navbar navbar--primary">
+    <nav className="flex items-center justify-between navbar navbar--primary">
       {logo && <div className="navbar__logo">{logo}</div>}
+
       <ul className="navbar__items">
         {items.map((item, index) => (
           <li key={index} className="navbar__item">
@@ -29,8 +26,13 @@ export function Primary({ logo, items, ctaText, ctaLink }: PrimaryProps) {
           </li>
         ))}
       </ul>
+
       {ctaText && ctaLink && (
-        <Button variant="primary" size="sm" onClick={() => window.location.href = ctaLink}>
+        <Button
+          variant="primary"
+          size="sm"
+          onClick={() => (window.location.href = ctaLink)}
+        >
           {ctaText}
         </Button>
       )}
