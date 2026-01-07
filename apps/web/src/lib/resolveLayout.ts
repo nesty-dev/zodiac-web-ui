@@ -2,7 +2,7 @@ import { LayoutThemeA } from "@zodiac/prestes";
 
 export function resolveLayout(layoutName: string) {
   const layoutMap: Record<string, React.ComponentType<any>> = {
-    ThemeA: LayoutThemeA,
+    LayoutThemeA: LayoutThemeA,
     // Add more layouts as they become available
   };
 
