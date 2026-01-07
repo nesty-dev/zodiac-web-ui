@@ -1,29 +1,94 @@
 {
   "id": "aries",
   "label": "Aries",
-  "layout": "theme1",
-
+  "layout": "LayoutThemeA",
   "style": {
     "tokens": "aries",
     "overrides": {
+      "--spacing-small": "8px",
+      "--spacing-medium": "16px",
+      "--spacing-large": "24px",
+      "--spacing-xlarge": "32px",
       "--background": "oklch(0.225 0.0129 314.55)",
-      "--foreground": "oklch(0.9821 0 0)"
+      "--foreground": "oklch(0.9821 0 0)",
+      "--primary-soft": "oklch(0.6374 0.185 293.42)",
+      "--primary": "oklch(0.3791 0.2189 280.84)",
+      "--primary-hard": "oklch(0.2874 0.1653 281.14)",
+      "--secondary-soft": "oklch(0.8768 0.1045 187.11)",
+      "--secondary": "oklch(0.7404 0.1297 183.28)",
+      "--secondary-hard": "oklch(0.5605 0.0983 183.03)"
     }
   },
-
-  "layoutSlots": {
-    "Header": "Primary"
-  },
-
+  "layoutSlots": [
+    {
+      "name": "navbar",
+      "component": "NavbarPrimary",
+      "props": {
+        "logo": "Aries",
+        "items": [
+          {
+            "label": "Home",
+            "href": "/"
+          },
+          {
+            "label": "About",
+            "href": "/about"
+          },
+          {
+            "label": "Contact",
+            "href": "/contact"
+          }
+        ]
+      }
+    }
+  ],
   "pages": [
     {
       "name": "Home",
       "path": "/",
-      "components": {
-        "Hero": "Editorial",
-        "Section1": "Grid",
-        "Section2": "Minimal"
-      }
+      "components": [
+        {
+          "section": "hero",
+          "component": "HeroEditorial",
+          "props": {
+            "title": "Welcome to Aries",
+            "subtitle": "A modern theme for your web application.",
+            "ctaText": "Explore More",
+            "ctaLink": "/explore",
+            "imageUrl": "https://cdn.leonardo.ai/users/6b8dc905-9e9c-415f-8cb9-a67cec5d40ff/generations/1f0eafde-3cf8-6960-8049-94449b47aac5/gemini-image-2_A_sleek_black_sports_car_with_matte_and_glossy_black_paint_finishes_in_a_dark_st-0.jpg"
+          }
+        },
+        {
+          "section": "home",
+          "component": "HomeGrid",
+          "props": {
+            "title": "Our Features",
+            "items": [
+              {
+                "title": "Fast Performance",
+                "description": "Experience lightning-fast load times and smooth interactions."
+              },
+              {
+                "title": "Responsive Design",
+                "description": "Looks great on any device, from mobile to desktop."
+              },
+              {
+                "title": "Customizable",
+                "description": "Easily tailor the theme to fit your brand and style."
+              }
+            ],
+            "columns": 3
+          }
+        },
+        {
+          "section": "home",
+          "component": "HomeMinimal",
+          "props": {
+            "title": "Get Started Today",
+            "description": "Join thousands of satisfied users"
+          }
+        }
+      ]
     }
   ]
 }

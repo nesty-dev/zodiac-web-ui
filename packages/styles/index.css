@@ -1,5 +1,3 @@
-@import "tailwindcss";
-
 @import './base/tokens.css';
 
 /* Base styles */
@@ -14,5 +12,14 @@ body {
 }
 
 .navbar {
-  @apply flex items-center p-4;
+  @apply flex items-center gap-medium px-large py-medium bg-secondary-soft text-primary;
+
+  .navbar__logo {
+    @apply font-bold text-xl;
+  }
+
+  .navbar__items {
+    @apply ml-auto flex gap-medium;
+
+  }
 }

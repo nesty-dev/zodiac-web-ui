@@ -1,4 +1,17 @@
 @theme {
+  /* Spacing and sizing Tokens */
+  --spacing-small: var(--spacing-small);
+  --spacing-medium: var(--spacing-medium);
+  --spacing-large: var(--spacing-large);
+  --spacing-xlarge: var(--spacing-xlarge);
+
+  /* Color Tokens */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-primary-soft: var(--primary-soft);
+  --color-primary: var(--primary);
+  --color-primary-hard: var(--primary-hard);
+  --color-secondary-soft: var(--secondary-soft);
+  --color-secondary: var(--secondary);
+  --color-secondary-hard: var(--secondary-hard);
 }

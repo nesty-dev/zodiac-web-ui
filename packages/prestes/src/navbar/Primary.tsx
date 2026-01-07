@@ -8,11 +8,9 @@ export interface NavItem {
 export interface PrimaryProps {
   logo?: string;
   items: NavItem[];
-  ctaText?: string;
-  ctaLink?: string;
 }
 
-export function Primary({ logo, items, ctaText, ctaLink }: PrimaryProps) {
+export function Primary({ logo, items }: PrimaryProps) {
   return (
     <nav className="navbar navbar--primary">
       {logo && <div className="navbar__logo">{logo}</div>}
@@ -26,16 +24,6 @@ export function Primary({ logo, items, ctaText, ctaLink }: PrimaryProps) {
           </li>
         ))}
       </ul>
-
-      {ctaText && ctaLink && (
-        <Button
-          variant="primary"
-          size="sm"
-          onClick={() => (window.location.href = ctaLink)}
-        >
-          {ctaText}
-        </Button>
-      )}
     </nav>
   );
 }

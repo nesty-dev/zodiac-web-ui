@@ -38,8 +38,6 @@ export default function HomePage() {
             { label: "About", href: "/about" },
             { label: "Contact", href: "/contact" },
           ]}
-          ctaText="Get Started"
-          ctaLink="/get-started"
         />
       )}
 
