@@ -1,10 +1,16 @@
-/**
- * Resolves layout component based on theme configuration.
- * @param layoutName - The semantic name of the layout (e.g., "Theme1", "Theme2")
- * @returns The layout component
- */
+import { LayoutThemeA } from "@zodiac/prestes";
+
 export function resolveLayout(layoutName: string) {
-  // TODO: Implement layout resolver
-  // Maps semantic names to actual layout components from @zodiac/ui or @zodiac/prestes
-  return null;
+  const layoutMap: Record<string, React.ComponentType<any>> = {
+    ThemeA: LayoutThemeA,
+    // Add more layouts as they become available
+  };
+
+  const layout = layoutMap[layoutName];
+  if (!layout) {
+    console.warn(`Unknown layout: ${layoutName}`);
+    return null;
+  }
+
+  return layout;
 }

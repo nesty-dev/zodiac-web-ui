@@ -12,8 +12,7 @@
   },
 
   "layoutSlots": {
-    "Header": "Compact",
-    "Sidebar": "Default"
+    "Header": "Compact"
   },
 
   "pages": [
@@ -22,7 +21,7 @@
       "path": "/",
       "components": {
         "Hero": "Minimal",
-        "Section1": "Editorial",
+        "Section1": "Minimal",
         "Section2": "Grid"
       }
     }

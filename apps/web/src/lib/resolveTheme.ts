@@ -1,20 +1,53 @@
-import * as Hero from "@zodiac/prestes/hero";
-import * as Home from "@zodiac/prestes/home";
-import * as Header from "@zodiac/prestes/navbar";
+import * as HeroPresets from "@zodiac/prestes/hero";
+import * as HomePresets from "@zodiac/prestes/home";
+import * as NavBarPresets from "@zodiac/prestes/navbar";
 
 import { LayoutThemeA } from "@zodiac/prestes/layout";
 
+const HERO_MAP = {
+  Editorial: HeroPresets.Editorial,
+  Minimal: HeroPresets.Minimal,
+};
+
+const HOME_MAP = {
+  Grid: HomePresets.Grid,
+  Minimal: HomePresets.Minimal,
+};
+
+const NAVBAR_MAP = {
+  Primary: NavBarPresets.Primary,
+  Compact: NavBarPresets.Compact,
+};
+
 export function resolveTheme(theme: any) {
-  const page = theme.pages[0]; // ตอนนี้เอา Home หน้าเดียวก่อน
+  if (!theme || !Array.isArray(theme.pages)) {
+    return {
+      Layout: LayoutThemeA,
+      props: { children: null },
+    };
+  }
+
+  const page = theme.pages[0];
+
+  const HeaderComponent = NAVBAR_MAP[theme.layoutSlots?.Header];
+
+  const HeroComponent = HERO_MAP[page.components?.Hero];
+
+  const Section1Component = HOME_MAP[page.components?.Section1];
+
+  const Section2Component = HOME_MAP[page.components?.Section2];
 
   return {
     Layout: LayoutThemeA,
-
-    slots: {
-      Header: Header[theme.layoutSlots.Header],
-      Hero: Hero[page.components.Hero],
-      Section1: Home[page.components.Section1],
-      Section2: Home[page.components.Section2],
+    props: {
+      Header: HeaderComponent && <HeaderComponent />,
+      children: (
+        <>
+          {HeroComponent && <HeroComponent />}
+          {Section1Component && <Section1Component />}
+          {Section2Component && <Section2Component />}
+        </>
+      ),
     },
   };
 }
