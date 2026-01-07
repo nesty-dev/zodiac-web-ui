@@ -14,7 +14,7 @@ export interface PrimaryProps {
 
 export function Primary({ logo, items, ctaText, ctaLink }: PrimaryProps) {
   return (
-    <nav className="flex items-center justify-between navbar navbar--primary">
+    <nav className="navbar navbar--primary">
       {logo && <div className="navbar__logo">{logo}</div>}
 
       <ul className="navbar__items">
