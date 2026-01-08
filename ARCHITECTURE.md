@@ -9,7 +9,7 @@ The Zodiac Platform is built on a **data-driven, component-based architecture** 
 ### 1. Single Source of Truth
 
 - **UI rendering logic exists in ONE place only**
-- Shared packages (`@zodiac/ui`, `@zodiac/prestes`) contain all components
+- Shared packages (`@zodiac/ui`, `@zodiac/presets`) contain all components
 - `apps/web` is the only renderer
 - `apps/backoffice` configures but does NOT render
 
@@ -24,7 +24,7 @@ The Zodiac Platform is built on a **data-driven, component-based architecture** 
 - **apps/web**: Public rendering + preview
 - **apps/backoffice**: Configuration UI + admin
 - **packages/ui**: Base design system
-- **packages/prestes**: Page-level sections
+- **packages/presets**: Page-level sections
 - **packages/styles**: Pure CSS theming
 - **packages/contracts**: Shared types
 
@@ -69,7 +69,7 @@ Components are identified by **type + variant**:
 // Variants: 'Editorial', 'Minimal', 'Split'
 
 resolvePreset("hero", "Editorial");
-// → Returns: HeroEditorial from @zodiac/prestes
+// → Returns: HeroEditorial from @zodiac/presets
 ```
 
 ### Resolver Flow
@@ -119,22 +119,22 @@ Component Render
 
 ```typescript
 // apps/web/src/lib/resolvePreset.ts
-import * as Prestes from "@zodiac/prestes";
+import * as presets from "@zodiac/presets";
 
 export function resolvePreset(type: string, variant: string) {
   const componentMap = {
     hero: {
-      Editorial: Prestes.HeroEditorial,
-      Minimal: Prestes.HeroMinimal,
-      Split: Prestes.HeroSplit,
+      Editorial: presets.HeroEditorial,
+      Minimal: presets.HeroMinimal,
+      Split: presets.HeroSplit,
     },
     navbar: {
-      Primary: Prestes.NavbarPrimary,
-      Compact: Prestes.NavbarCompact,
+      Primary: presets.NavbarPrimary,
+      Compact: presets.NavbarCompact,
     },
     home: {
-      Grid: Prestes.HomeGrid,
-      Minimal: Prestes.HomeMinimal,
+      Grid: presets.HomeGrid,
+      Minimal: presets.HomeMinimal,
     },
   };
 
@@ -243,13 +243,13 @@ export default function PreviewPage({ searchParams }) {
 ```
 apps/web
   ├─ @zodiac/ui
-  ├─ @zodiac/prestes
+  ├─ @zodiac/presets
   └─ @zodiac/contracts
 
 apps/backoffice
   └─ @zodiac/contracts
 
-packages/prestes
+packages/presets
   └─ @zodiac/ui
 
 packages/ui
@@ -266,8 +266,8 @@ packages/contracts
 
 ### Adding New Components
 
-1. Create component in `packages/prestes/src/{type}/{Variant}.tsx`
-2. Export from `packages/prestes/src/index.ts`
+1. Create component in `packages/presets/src/{type}/{Variant}.tsx`
+2. Export from `packages/presets/src/index.ts`
 3. Add to resolver map in `apps/web/src/lib/resolvePreset.ts`
 4. Component automatically available in Back Office picker
 
@@ -286,7 +286,7 @@ Simply add to `apps/` directory and reference shared packages:
 {
   "dependencies": {
     "@zodiac/ui": "workspace:*",
-    "@zodiac/prestes": "workspace:*"
+    "@zodiac/presets": "workspace:*"
   }
 }
 ```

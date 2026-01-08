@@ -7,4 +7,4 @@
 
 /* scan packages */
 @source "../../../../packages/ui/src/**/*.{ts,tsx}";
-@source "../../../../packages/prestes/src/**/*.{ts,tsx}";
+@source "../../../../packages/presets/src/**/*.{ts,tsx}";

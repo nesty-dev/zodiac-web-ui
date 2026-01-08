@@ -38,7 +38,7 @@ This document describes the architecture and data flow of the Zodiac Platform mo
             ├───────────────────────────────────────────┤
             │                                           │
             │  ┌────────────┐  ┌────────────┐          │
-            │  │    ui/     │  │ prestes/   │          │
+            │  │    ui/     │  │ presets/   │          │
             │  │ (atoms,    │  │ (hero,     │          │
             │  │ molecules, │◄─│  home,     │          │
             │  │ organisms) │  │  navbar)   │          │
@@ -108,7 +108,7 @@ This document describes the architecture and data flow of the Zodiac Platform mo
        ▼
 ┌──────────────┐
 │ packages/    │ Returns HeroEditorial component
-│ prestes      │ <HeroEditorial {...props} />
+│ presets      │ <HeroEditorial {...props} />
 └──────────────┘
 ```
 
@@ -147,10 +147,10 @@ This document describes the architecture and data flow of the Zodiac Platform mo
 }
 
 // apps/web resolves:
-import { HeroEditorial } from '@zodiac/prestes';
+import { HeroEditorial } from '@zodiac/presets';
 
 // Component tree:
-packages/prestes/src/hero/Editorial.tsx
+packages/presets/src/hero/Editorial.tsx
   └─> imports from packages/ui
       └─> styled by packages/styles
 ```
@@ -160,7 +160,7 @@ packages/prestes/src/hero/Editorial.tsx
 ### 1. Single Source of Truth
 
 - **apps/web** is the ONLY place that renders UI
-- **packages/ui** and **packages/prestes** contain component definitions
+- **packages/ui** and **packages/presets** contain component definitions
 - **apps/backoffice** NEVER duplicates UI rendering
 
 ### 2. Data-Driven Architecture
@@ -193,14 +193,14 @@ packages/prestes/src/hero/Editorial.tsx
 ```
 apps/web
   ├─> @zodiac/ui
-  ├─> @zodiac/prestes
+  ├─> @zodiac/presets
   │     └─> @zodiac/ui
   └─> @zodiac/contracts
 
 apps/backoffice
   └─> @zodiac/contracts
 
-packages/prestes
+packages/presets
   └─> @zodiac/ui
 
 packages/ui

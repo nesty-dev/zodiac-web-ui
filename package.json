@@ -5,7 +5,7 @@
   "workspaces": [
     "apps/*",
     "packages/ui",
-    "packages/prestes",
+    "packages/presets",
     "packages/contracts"
   ],
   "description": "Zodiac-themed platform monorepo",

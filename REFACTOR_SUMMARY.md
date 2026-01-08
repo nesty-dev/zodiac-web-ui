@@ -64,7 +64,7 @@ zodiac-web-ui/
 │   │   ├── package.json
 │   │   └── tsconfig.json
 │   │
-│   ├── prestes/                ✅ Created
+│   ├── presets/                ✅ Created
 │   │   ├── src/
 │   │   │   ├── hero/
 │   │   │   │   ├── Editorial.tsx
@@ -133,7 +133,7 @@ zodiac-web-ui/
 - Organisms: Header
 - Fully typed with TypeScript
 
-### @zodiac/prestes
+### @zodiac/presets
 
 - Page-level preset components
 - Hero variants: Editorial, Minimal, Split

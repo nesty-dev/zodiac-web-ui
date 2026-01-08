@@ -1,8 +1,8 @@
-import * as HeroPresets from "@zodiac/prestes/hero";
-import * as HomePresets from "@zodiac/prestes/home";
-import * as NavBarPresets from "@zodiac/prestes/navbar";
+import * as HeroPresets from "@zodiac/presets/hero";
+import * as HomePresets from "@zodiac/presets/home";
+import * as NavBarPresets from "@zodiac/presets/navbar";
 
-import { LayoutThemeA } from "@zodiac/prestes/layout";
+import { LayoutThemeA } from "@zodiac/presets/layout";
 
 const HERO_MAP = {
   Editorial: HeroPresets.Editorial,

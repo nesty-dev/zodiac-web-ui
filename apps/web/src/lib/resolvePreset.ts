@@ -1,22 +1,14 @@
-import {
-  HeroEditorial,
-  HeroMinimal,
-  HeroSplit,
-  HomeGrid,
-  HomeMinimal,
-  NavbarPrimary,
-  NavbarCompact,
-} from "@zodiac/prestes";
+import * as Presets from "@zodiac/presets";
 
 export function resolvePreset(componentName: string) {
   const presetMap: Record<string, React.ComponentType<any>> = {
-    HeroEditorial,
-    HeroMinimal,
-    HeroSplit,
-    HomeGrid,
-    HomeMinimal,
-    NavbarPrimary,
-    NavbarCompact,
+    HeroEditorial: Presets.HeroEditorial,
+    HeroMinimal: Presets.HeroMinimal,
+    HeroSplit: Presets.HeroSplit,
+    HomeGrid: Presets.HomeGrid,
+    HomeMinimal: Presets.HomeMinimal,
+    NavbarPrimary: Presets.NavbarPrimary,
+    NavbarCompact: Presets.NavbarCompact,
   };
 
   const component = presetMap[componentName];

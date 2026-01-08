@@ -46,7 +46,7 @@ root/
 │  │  │  └─ organisms/    # Header, etc.
 │  │  └─ index.ts
 │  │
-│  ├─ prestes/            # Page-level preset components
+│  ├─ presets/            # Page-level preset components
 │  │  ├─ hero/            # Editorial, Minimal, Split
 │  │  ├─ home/            # Grid, Minimal
 │  │  ├─ navbar/          # Primary, Compact
@@ -99,7 +99,7 @@ Base UI component library (Design System).
 - No routing, no API calls, no theme logic
 - Pure presentational components
 
-### packages/prestes
+### packages/presets
 
 Page-level preset components (sections).
 

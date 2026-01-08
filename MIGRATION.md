@@ -29,7 +29,7 @@ zodiac-web-ui/
 │   └── backoffice/
 ├── packages/
 │   ├── ui/
-│   ├── prestes/
+│   ├── presets/
 │   ├── styles/
 │   └── contracts/
 └── package.json (monorepo root)
@@ -45,7 +45,7 @@ Created the new monorepo structure with:
 - apps/web (Next.js public website)
 - apps/backoffice (Admin panel)
 - packages/ui (Base UI components)
-- packages/prestes (Preset components)
+- packages/presets (Preset components)
 - packages/styles (Design tokens and themes)
 - packages/contracts (Shared types and schemas)
 
@@ -57,7 +57,7 @@ Created the new monorepo structure with:
 **To**:
 
 - `packages/ui/src/atoms/` - Base UI components
-- `packages/prestes/src/` - Page-level presets
+- `packages/presets/src/` - Page-level presets
 
 **Actions**:
 

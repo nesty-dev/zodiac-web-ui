@@ -21,7 +21,7 @@
 │  │           │             │    │           ▲                │ │
 │  │           │             │    │           │                │ │
 │  │           ▼             │    │  ┌────────┴──────────────┐ │
-│  │  ┌─────────────────┐   │    │  │  packages/prestes     │ │ │
+│  │  ┌─────────────────┐   │    │  │  packages/presets     │ │ │
 │  │  │ apps/backoffice │   │    │  │  (Page Presets)       │ │ │
 │  │  │  (Next.js)      │◄──┼────┼──│  Hero/Home/Navbar     │ │ │
 │  │  │  Port: 3001     │   │    │  └───────────────────────┘ │ │
@@ -77,7 +77,7 @@
                 │
                 ▼
      ┌──────────────────────┐
-     │  packages/prestes    │
+     │  packages/presets    │
      │  - HeroEditorial     │
      │  - NavbarPrimary     │
      │  - HomeGrid          │
@@ -266,7 +266,7 @@
          │                │                │
          ▼                ▼                ▼
     ┌────────┐      ┌──────────┐    ┌─────────┐
-    │ @ui    │      │ @prestes │    │ @styles │
+    │ @ui    │      │ @presets │    │ @styles │
     └────────┘      └────┬─────┘    └─────────┘
                          │
                          ▼
@@ -289,7 +289,7 @@
 Legend:
   → imports/depends on
   @ui = packages/ui
-  @prestes = packages/prestes
+  @presets = packages/presets
   @styles = packages/styles
   @contracts = packages/contracts
 ```
@@ -357,7 +357,7 @@ zodiac-web-ui/
 │   │   ├── package.json
 │   │   └── tsconfig.json
 │   │
-│   ├── prestes/                      # Page-level presets
+│   ├── presets/                      # Page-level presets
 │   │   ├── src/
 │   │   │   ├── hero/
 │   │   │   │   ├── Editorial.tsx    # Hero variant
