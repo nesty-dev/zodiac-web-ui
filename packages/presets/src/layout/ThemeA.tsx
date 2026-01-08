@@ -1,16 +1,16 @@
 import { ReactNode } from "react";
 
 export type ThemeAProps = {
-  Header?: ReactNode;
+  header?: ReactNode;
   children?: ReactNode;
 };
 
-export function ThemeA({ Header, children }: ThemeAProps) {
+export function ThemeA({ header, children }: ThemeAProps) {
   return (
     <div className="themeA-layout min-h-screen flex flex-col">
       {/* Header */}
-      {Header && (
-        <header className="themeA-header sticky top-0 z-50">{Header}</header>
+      {header && (
+        <header className="themeA-header sticky top-0 z-50">{header}</header>
       )}
 
       {/* Main */}

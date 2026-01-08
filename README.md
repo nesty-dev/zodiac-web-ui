@@ -222,8 +222,8 @@ Pages are composed from preset components via JSON:
 Components are resolved by semantic names:
 
 ```typescript
-// apps/web/src/lib/resolvePreset.ts
-resolvePreset("hero", "Editorial"); // Returns HeroEditorial component
+// apps/web/src/lib/resolvePresets.ts
+resolvePresets("hero", "Editorial"); // Returns HeroEditorial component
 ```
 
 ### Preview Mode
