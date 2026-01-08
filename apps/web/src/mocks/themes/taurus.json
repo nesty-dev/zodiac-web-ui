@@ -9,14 +9,16 @@
       "--spacing-medium": "16px",
       "--spacing-large": "24px",
       "--spacing-xlarge": "32px",
-      "--background": "oklch(0.7665 0.1387 91.06)",
-      "--foreground": "oklch(0.2178 0 0)",
-      "--primary-soft": "oklch(0.6374 0.185 293.42)",
-      "--primary": "oklch(0.3791 0.2189 280.84)",
-      "--primary-hard": "oklch(0.2874 0.1653 281.14)",
-      "--secondary-soft": "oklch(0.8768 0.1045 187.11)",
-      "--secondary": "oklch(0.7404 0.1297 183.28)",
-      "--secondary-hard": "oklch(0.5605 0.0983 183.03)"
+      "--background": "oklch(0.1591 0 0)",
+      "--foreground": "oklch(1 0 0)",
+      "--surface": "oklch(0.2603 0 0)",
+      "--surface-foreground": "oklch(1 0 0)",
+      "--primary-soft": "oklch(0.9253 0.0539 70.69)",
+      "--primary": "oklch(0.8558 0.1095 69.85)",
+      "--primary-hard": "oklch(0.7429 0.1802 56.67)",
+      "--secondary-soft": "oklch(0.6223 0.1129 264.2)",
+      "--secondary": "oklch(0.2759 0.0851 262.88)",
+      "--secondary-hard": "oklch(0.2148 0.0698 262.72)"
     }
   },
   "layoutSlots": [

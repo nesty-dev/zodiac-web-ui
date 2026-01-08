@@ -1,16 +1,27 @@
-import type { Metadata } from "next";
-
 import { loadTheme } from "@/lib/loadTheme";
 import { applyStyleOverrides } from "@/lib/applyStyle";
+import { resolveLayout } from "@/lib/resolveLayout";
+import { resolvePreset } from "@/lib/resolvePreset";
 
 import "../styles/globals.css";
 
-export const metadata: Metadata = {
-  title: "Zodiac Platform",
-  description: "Zodiac-themed websites",
-};
-
 const HOST = process.env.THEME_KEY || "aries";
+
+function LayoutContent({
+  theme,
+  children,
+}: {
+  theme: ReturnType<typeof loadTheme>;
+  children: React.ReactNode;
+}) {
+  const Layout = resolveLayout(theme.layout);
+
+  if (Layout) {
+    return <Layout>{children}</Layout>;
+  }
+
+  return <div>{children}</div>;
+}
 
 export default function RootLayout({
   children,
@@ -26,7 +37,9 @@ export default function RootLayout({
       data-theme={theme.style?.tokens}
       style={styleVars as React.CSSProperties}
     >
-      <body>{children}</body>
+      <body>
+        <LayoutContent theme={theme}>{children}</LayoutContent>
+      </body>
     </html>
   );
 }

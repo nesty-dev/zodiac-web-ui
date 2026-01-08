@@ -1,4 +1,4 @@
-@import './base/tokens.css';
+@import "./base/tokens.css";
 
 /* Base styles */
 * {
@@ -12,14 +12,15 @@ body {
 }
 
 .navbar {
-  @apply flex items-center gap-medium px-large py-medium bg-secondary-soft text-primary;
+  &.navbar--primary {
+    @apply flex items-center gap-medium px-large py-medium bg-surface text-surface-foreground;
 
-  .navbar__logo {
-    @apply font-bold text-xl;
-  }
+    .navbar__logo {
+      @apply font-bold text-xl;
+    }
 
-  .navbar__items {
-    @apply ml-auto flex gap-medium;
-
+    .navbar__items {
+      @apply ml-auto flex gap-medium;
+    }
   }
 }
