@@ -3,7 +3,7 @@ import { applyStyleOverrides } from "@/lib/applyStyle";
 
 import "../styles/globals.css";
 
-const HOST = process.env.THEME_KEY || "aries";
+const HOST = process.env.NEXT_PUBLIC_THEME_KEY || "aries";
 
 export default function RootLayout({
   children,
