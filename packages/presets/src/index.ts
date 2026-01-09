@@ -19,3 +19,4 @@ export { Minimal as HomeMinimal } from "./home/Minimal";
 // Navbar Presets
 export { Primary as NavbarPrimary } from "./navbar/Primary";
 export { Compact as NavbarCompact } from "./navbar/Compact";
+export { TypeA as NavbarTypeA } from "./navbar/TypeA";

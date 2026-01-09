@@ -24,9 +24,10 @@
   "layoutSlots": [
     {
       "name": "navbar",
-      "component": "NavbarCompact",
+      "component": "NavbarTypeA",
       "props": {
-        "logo": "Taurus",
+        "logoUrl": "https://cdn.leonardo.ai/users/28306645-7194-46a4-b509-6fc7ce13699b/generations/126a995c-23eb-4d88-8200-7666481fe6b5/segments/3:4:1/Lucid_Origin_original_cute_weird_creature_Mofu_fluffy_pastel_f_2.jpg",
+        "logoName": "Taurus",
         "items": [
           {
             "label": "Home",

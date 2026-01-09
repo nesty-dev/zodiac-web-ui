@@ -8,10 +8,6 @@ export interface CompactProps {
   items: NavItem[];
 }
 
-/**
- * Compact Navbar Preset
- * Minimal, compact navbar.
- */
 export function Compact({ logo, items }: CompactProps) {
   return (
     <nav className="navbar navbar--compact">
